@@ -1,0 +1,107 @@
+.link {
+  text-decoration: none;
+  color: rgb(16, 122, 228);
+  cursor: pointer;
+}
+
+.register-container {
+  background-image: url("https://res.cloudinary.com/dwo2f3fyw/image/upload/v1749633254/samples/landscapes/beach-boat.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  @media screen and (max-width: 768px) {
+    align-items: center;
+  }
+}
+
+.register-container h1 {
+  align-self: center;
+  font-size: min(2em, 5vw);
+  font-family: "Roboto";
+  background-image: linear-gradient(160deg, #f309c8 0%, #0077ff 100%, #ffff00 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-right: 150px;
+  background-color: #ffff;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  @media screen and (max-width: 768px) {
+    margin-right: 0;
+    width: 300px;
+  }
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: min(1.2em, 3vw);
+  font-family: "Roboto";
+  @media screen and (max-width: 768px) {
+  }
+}
+
+.form-group input {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: min(0.9em, 3vw);
+  width: 100%;
+  &::placeholder {
+    color: #aaa;
+    font-size: 15px;
+    font-family: "Roboto";
+    @media screen and (max-width: 768px) {
+      font-size: 15px;
+    }
+  }
+  &:focus {
+    outline: none;
+    border-color: #0077ff;
+    box-shadow: 0 0 5px rgba(0, 119, 255, 0.5);
+  }
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 5px;
+  input{
+    cursor: pointer;
+  }
+}
+
+.register-container form button {
+  padding: 10px;
+  align-self: flex-end;
+  background-color: #0077ff;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 4px;
+  font-family: "Roboto";
+  cursor: pointer;
+  &:is(:hover, :focus){
+    background-color: rgb(16, 122, 228);
+  }
+}
+.register-container form span {
+  margin-left: 20px;
+}

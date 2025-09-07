@@ -1,28 +1,24 @@
-import {useContext, useState} from 'react'
+import { useState, useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 import Login from '../../components/Login/Login'
 import Register from '../../components/Register/Register'
-import { UserContext } from '../../context/userContext.jsx'
 
-
+import Cookies from 'js-cookie'
 
 const Auth = () => {
-    const {token} = useContext(UserContext)
-    const [isLogin, setIsLogin] = useState(true)
+  const [isLogin, setIsLogin] = useState(true)
+  const token = Cookies.get('token')
+  const navigate = useNavigate()
 
     const handleToggle = () => {
         setIsLogin(!isLogin)
     }
 
-
+   
   return (
-    <>
-    <div>
-      {!token && <h2>Please log in or register.</h2>}
-      
+    <div>      
       {isLogin ? <Login handleToggle={handleToggle} /> : <Register handleToggle={handleToggle} />}
     </div>
-
-        </>
   )
 }
 

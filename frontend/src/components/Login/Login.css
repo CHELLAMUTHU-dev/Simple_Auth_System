@@ -1,0 +1,82 @@
+.link {
+  text-decoration: none;
+  color: rgb(16, 122, 228);
+  cursor: pointer;
+}
+
+.login-container {
+  background-image: url("https://res.cloudinary.com/dwo2f3fyw/image/upload/v1757220253/photorealistic-view-tree-nature-with-branches-trunk_1_xtzrbn.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  @media screen and (max-width: 768px) {
+    align-items: center;
+  } 
+}
+
+.login-container h1 {
+  display: flex;
+  align-self: center;
+  font-size: min(2em, 5vw);
+  font-family: "Roboto";
+  background-image: linear-gradient(
+    160deg,
+    #f309c8 0%,
+    #0077ff 100%,
+    #ffff00 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 400px;
+  background-color: white;
+  margin-right: 150px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  @media screen and (max-width: 768px) {
+    margin-right: 0;
+    width: 300px;
+  }
+}
+
+.login-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-container .checkbox-input{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.checkbox-input input{
+  cursor: pointer;
+}
+
+.login-container button{
+     background-color: rgb(21, 130, 247);   
+     align-self: flex-end;
+     border: none;
+     outline: none;
+     padding: 10px 15px;
+     font-family: "Roboto";
+     font-size: 16px;
+     border-radius: 4px;
+     cursor: pointer;
+     color: white;
+     &:is(:hover, :focus){
+        background-color: rgb(16, 122, 228);
+     }
+}

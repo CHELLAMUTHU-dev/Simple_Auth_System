@@ -2,13 +2,10 @@ import { createContext, useState } from "react";
 export const UserContext = createContext(null);
 
 export const UserContextProvider = ({children}) => {
-    const [token, setToken] = useState('');
-    const url = 'http://localhost:5000';
+    const url = 'http://localhost:5000/api';
 
 
     const contextValue = {
-        token,
-        setToken,
         url
     };
 
