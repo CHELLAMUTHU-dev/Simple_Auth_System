@@ -14,6 +14,9 @@ const Auth = () => {
         setIsLogin(!isLogin)
     }
 
+    useEffect(() => {
+        if(token) navigate('/')
+    }, [token])
    
   return (
     <div>      
