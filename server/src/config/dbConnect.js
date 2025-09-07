@@ -7,7 +7,9 @@ const dbConnect = mysql.createConnection({
     password: process.env.MYSQL_ADDON_PASSWORD,
     database: process.env.MYSQL_ADDON_DB,
     port: process.env.MYSQL_ADDON_PORT,
-    connectionLimit: 10,    
+    waitForConnections: true,
+    connectionLimit: 10, 
+    queueLimit: 0   
 });
 
 
